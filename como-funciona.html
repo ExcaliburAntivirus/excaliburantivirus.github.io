@@ -1,0 +1,300 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script-index.js" defer></script>
+    <title>Excalibur Antivirus Como Funciona</title>
+</head>
+<body>
+    <div class="topbar">
+        <div class=" barra">
+            <img class="logo" src="img/logo.png" alt="Logo">
+            <img class="logo-name" src="img/logo-name-better.png" alt="logo name">
+            <a href="index.html">Tela inicial</a>
+            <a href="download.html">Download</a>
+            <a href="como-funciona.html">Como funciona</a>
+            <div class="parte-left">
+                <input onclick="pesquisar()" class="barra-de-pesquisa" type="text" placeholder="Pesquisar..." id="pesquisa">
+                <button class="perfil-btn" id="abrir-popover-perfil">
+                <img src="img/perfil-icon.png" alt="conta" class="conta-img">
+                <h4 class="h4-perfil">Usuário</h4>
+                </button>
+            </div>
+        </div>
+        <img class="borda" src="img/borda-bg.png" alt="imagem">
+    </div>
+
+    <div class="content">
+    <h1>Como Funciona o Excalibur Antivirus</h1>
+    <p>Veja como o Excalibur Antivirus protege o sistema de forma eficiente:</p>
+ 
+    <!-- 1. SANDBOX -->
+    <h1 id="sandboxing">1. Sandbox</h1>
+    <p>O sandbox é um ambiente isolado onde programas suspeitos são executados com segurança, impedindo que ameaças afetem o sistema principal durante a análise.</p>
+    <ul>
+        <li>Arquivos desconhecidos são executados em ambiente virtual separado antes de qualquer acesso ao sistema real.</li>
+        <li>Vírus e malware rodando no sandbox não conseguem infectar o sistema.</li>
+        <li>Eficaz contra ataques <strong>zero-day</strong>, detectando comportamento malicioso mesmo sem assinatura conhecida.</li>
+        <li>Ransomwares são bloqueados antes de conseguirem criptografar arquivos do usuário.</li>
+        <li>O processo ocorre em segundo plano, sem interferir no uso normal do computador.</li>
+        <li>Múltiplos arquivos podem ser analisados simultaneamente em ambientes separados.</li>
+        <li>Após a análise, o Excalibur aprova ou bloqueia o arquivo automaticamente.</li>
+    </ul>
+    <div class="sandbox-image-container">
+        <img class="sandbox-image" src="img/exemplo-sandbox.png" alt="Exemplo de Sandbox">
+    </div>
+ 
+    <!-- 2. BANCO DE ASSINATURAS -->
+    <h1 id="assinaturas">2. Banco de Assinaturas</h1>
+    <p>O antivírus possui um banco de dados com registros de ameaças conhecidas. Os arquivos são comparados com esse banco para identificar vírus já catalogados.</p>
+    <ul>
+        <li>Cada ameaça catalogada possui um <strong>hash único</strong> que permite identificação precisa e sem ambiguidade.</li>
+        <li>A comparação por assinatura é extremamente rápida, permitindo varreduras eficientes em larga escala.</li>
+        <li>O banco conta com milhões de registros, cobrindo vírus, trojans, spywares e outros malwares.</li>
+        <li>É atualizado automaticamente para incluir novas ameaças descobertas pela comunidade global.</li>
+        <li>Arquivos acessados pelo usuário são verificados em tempo real contra o banco.</li>
+        <li>Ao detectar uma assinatura maliciosa, o arquivo é imediatamente colocado em quarentena.</li>
+        <li>Funciona como a <strong>primeira linha de defesa</strong>, antes de técnicas mais avançadas serem acionadas.</li>
+        <li>Complementado por uma base em nuvem para cobertura máxima.</li>
+    </ul>
+ 
+    <!-- 3. SIGMA RULES -->
+    <h1 id="sigma">3. Sigma Rules</h1>
+    <p>As regras Sigma identificam padrões suspeitos no sistema com base em comportamentos conhecidos, mesmo que o arquivo não esteja no banco de assinaturas. A taxa de falso positivo é de aproximadamente 4%.</p>
+    <ul>
+        <li>Sigma é um formato <strong>universal e open source</strong>, amplamente adotado pela comunidade de cibersegurança.</li>
+        <li>Os logs do sistema são monitorados em tempo real e qualquer evento suspeito é analisado imediatamente.</li>
+        <li>Detecta execuções maliciosas de <strong>PowerShell</strong>, movimentação lateral na rede e escalada de privilégio.</li>
+        <li>Padrões de <strong>exfiltração de dados</strong> são monitorados e alertados automaticamente.</li>
+        <li>Compatível com sistemas <strong>SIEM</strong>, facilitando integração em ambientes corporativos.</li>
+        <li>Quando uma regra é ativada, o Excalibur responde automaticamente à ameaça.</li>
+        <li>As regras são atualizadas constantemente para cobrir novas ameaças.</li>
+    </ul>
+    <div class="sigma-image-container">
+        <img class="sigma-image" src="img/exemplo-sigma-rules.png" alt="Exemplo de Sigma Rules">
+    </div>
+ 
+    <!-- 4. HEURÍSTICA -->
+    <h1 id="heuristica">4. Heurística</h1>
+    <p>A análise heurística avalia arquivos desconhecidos com base em características suspeitas, identificando possíveis ameaças novas sem precisar de uma assinatura prévia.</p>
+    <ul>
+        <li>Cada arquivo recebe uma <strong>pontuação de risco</strong> baseada nas características suspeitas encontradas.</li>
+        <li>Variantes de vírus conhecidos, mesmo com código modificado, são detectadas pela heurística.</li>
+        <li>Realiza <strong>análise estática</strong> (examina o código sem executar) e <strong>análise dinâmica</strong> (observa em execução).</li>
+        <li>Arquivos compactados ou ofuscados são desempacotados e analisados pelo Excalibur.</li>
+        <li>Detecta scripts maliciosos em <strong>JavaScript, VBScript e PowerShell</strong>.</li>
+        <li>Macros maliciosas em documentos do Office são identificadas antes da execução.</li>
+        <li>Arquivos com pontuação alta são automaticamente encaminhados para análise em sandbox.</li>
+        <li>A sensibilidade é calibrada para minimizar falsos positivos sem perder eficácia.</li>
+    </ul>
+ 
+    <!-- 5. ANÁLISE COMPORTAMENTAL -->
+    <h1 id="comportamento">5. Análise Comportamental</h1>
+    <p>O sistema monitora o comportamento dos programas em tempo real e bloqueia ações consideradas perigosas.</p>
+    <ul>
+        <li>Tentativas de <strong>injeção de código</strong> em outros processos são detectadas e interrompidas.</li>
+        <li>Modificações suspeitas no <strong>registro do sistema</strong> são interceptadas automaticamente.</li>
+        <li>Criptografia de arquivos em massa, característica de <strong>ransomware</strong>, é bloqueada imediatamente.</li>
+        <li>Detecta <strong>keyloggers</strong> e programas que tentam capturar a tela sem autorização.</li>
+        <li>Alerta quando um programa tenta acessar a <strong>câmera ou microfone</strong> sem permissão.</li>
+        <li>Conexões de rede suspeitas iniciadas por processos são identificadas e bloqueadas.</li>
+        <li>Tentativas de persistência maliciosa (iniciar com o sistema) são avaliadas e controladas.</li>
+        <li>Algoritmos de <strong>machine learning</strong> melhoram continuamente a detecção de comportamentos maliciosos.</li>
+    </ul>
+ 
+    <!-- 6. PROTEÇÃO WEB -->
+    <h1 id="web">6. Proteção Web</h1>
+    <p>A proteção web analisa o tráfego de internet e bloqueia o acesso a sites maliciosos ou potencialmente perigosos.</p>
+    <ul>
+        <li>Todo o tráfego é analisado em tempo real sem impactar a velocidade de navegação.</li>
+        <li>Ataques de <strong>phishing</strong> são bloqueados antes que o usuário insira seus dados.</li>
+        <li>O Excalibur inspeciona conexões <strong>HTTPS</strong> para detectar ameaças em tráfego criptografado.</li>
+        <li>Usa <strong>DNS seguro</strong> para bloquear domínios maliciosos antes da conexão ser estabelecida.</li>
+        <li>Bloqueia <strong>malvertising</strong> (anúncios maliciosos) e scripts de <strong>cryptojacking</strong>.</li>
+        <li>Extensões de navegador maliciosas são detectadas e removidas automaticamente.</li>
+        <li>Rastreadores e scripts de espionagem em sites são bloqueados.</li>
+        <li>Em redes <strong>Wi-Fi públicas</strong>, a proteção fica em modo reforçado automaticamente.</li>
+        <li>A base de dados de ameaças web é atualizada várias vezes ao dia.</li>
+    </ul>
+    <div class="web-protection-image-container">
+        <img class="web-protection-image" src="img/exemplo-proteção-web.png" alt="Exemplo de Proteção Web">
+    </div>
+ 
+    <!-- 7. VPN -->
+    <h1 id="vpn">7. VPN</h1>
+    <p>A VPN protege a conexão do usuário, criptografando os dados e aumentando a privacidade durante a navegação.</p>
+    <ul>
+        <li>Cria um <strong>túnel criptografado</strong> entre o dispositivo e a internet, impedindo interceptação por terceiros.</li>
+        <li>Oculta o endereço IP real do usuário, aumentando a privacidade online.</li>
+        <li>Utiliza protocolos modernos como <strong>WireGuard</strong> e <strong>OpenVPN</strong> para máxima segurança.</li>
+        <li>O <strong>kill switch</strong> corta a internet automaticamente se a VPN cair, evitando exposição acidental.</li>
+        <li>Protege contra <strong>vazamentos de DNS</strong> que poderiam revelar os sites visitados.</li>
+        <li>Opera sem registrar as atividades de navegação do usuário (<strong>no-log</strong>).</li>
+        <li>O <strong>split tunneling</strong> permite escolher quais aplicativos usam a VPN.</li>
+        <li>Ativa automaticamente ao detectar redes Wi-Fi não seguras.</li>
+        <li>Cobre múltiplos dispositivos simultaneamente com uma única conta.</li>
+    </ul>
+ 
+    <!-- 8. REPUTAÇÃO EM NUVEM -->
+    <h1 id="nuvem">8. Reputação em Nuvem</h1>
+    <p>O antivírus consulta servidores online para verificar a reputação de arquivos em tempo real, garantindo informações sempre atualizadas.</p>
+    <ul>
+        <li>A base é alimentada por milhões de dispositivos protegidos pelo Excalibur no mundo (<strong>inteligência coletiva</strong>).</li>
+        <li>Novos malwares são detectados rapidamente graças ao compartilhamento global de ameaças.</li>
+        <li>A análise em nuvem não sobrecarrega o dispositivo, pois o processamento ocorre nos servidores.</li>
+        <li>Cada arquivo recebe uma <strong>pontuação de confiança</strong> baseada na reputação registrada.</li>
+        <li>Os dados enviados são <strong>anonimizados</strong>, preservando a privacidade do usuário.</li>
+        <li>Ameaças emergentes identificadas na nuvem são distribuídas imediatamente a todos os usuários.</li>
+        <li>Quando offline, o Excalibur mantém proteção local completa.</li>
+    </ul>
+ 
+    <!-- 9. PROTEÇÃO CONTRA EXPLOITS -->
+    <h1 id="exploit">9. Proteção contra Exploits</h1>
+    <p>Essa função impede a exploração de falhas em programas, bloqueando tentativas de invasão baseadas em vulnerabilidades.</p>
+    <ul>
+        <li>Bloqueia ataques de <strong>buffer overflow</strong>, <strong>heap spray</strong> e cadeias de <strong>ROP</strong>.</li>
+        <li>Exploits direcionados a <strong>navegadores e plugins</strong> são neutralizados em tempo real.</li>
+        <li>Documentos <strong>Word, Excel e PDF</strong> com exploits embutidos são bloqueados antes de abertos.</li>
+        <li>Reforça proteções nativas do sistema como <strong>DEP</strong> e <strong>ASLR</strong>.</li>
+        <li>Monitora operações suspeitas na <strong>memória</strong> e bloqueia execução de shellcode injetado.</li>
+        <li>Eficaz contra exploits de <strong>zero-day</strong>, ainda sem patch disponível, via proteção comportamental.</li>
+        <li>Aplicativos legados sem suporte recebem proteção adicional contra exploits.</li>
+        <li>Atua em camada de kernel sem afetar a performance do sistema.</li>
+    </ul>
+ 
+    <!-- 10. AUTOPROTEÇÃO -->
+    <h1 id="autoprotecao">10. Autoproteção</h1>
+    <p>O antivírus possui mecanismos internos que evitam sua desativação por softwares maliciosos.</p>
+    <ul>
+        <li>Processos do Excalibur são protegidos contra <strong>encerramento forçado</strong> por malwares.</li>
+        <li>Arquivos do Excalibur no disco são protegidos contra exclusão, modificação ou corrupção.</li>
+        <li>Um <strong>watchdog interno</strong> reinicia automaticamente qualquer serviço interrompido.</li>
+        <li>As configurações são protegidas por senha, impedindo alterações não autorizadas.</li>
+        <li>A integridade dos arquivos é verificada periodicamente para detectar adulterações.</li>
+        <li>Atualizações são <strong>assinadas digitalmente</strong> para evitar instalação de versões falsas.</li>
+        <li>Mantém proteção ativa mesmo no <strong>modo seguro</strong> do Windows.</li>
+        <li>Bloqueia <strong>rootkits</strong> que tentam ocultar processos maliciosos e desativar o antivírus.</li>
+    </ul>
+ 
+    <!-- 11. CONTROLE DE COMPORTAMENTO DO SISTEMA -->
+    <h1 id="controle">11. Controle de Comportamento do Sistema</h1>
+    <p>Monitora continuamente as atividades do sistema, impedindo ações suspeitas antes que causem danos.</p>
+    <ul>
+        <li>Operações suspeitas no sistema de arquivos, como exclusão em massa, são bloqueadas imediatamente.</li>
+        <li>A área de inicialização do disco (<strong>MBR/UEFI</strong>) é protegida contra modificações por malwares.</li>
+        <li>Tarefas agendadas maliciosas criadas por malwares são detectadas e removidas.</li>
+        <li>Picos anormais de <strong>CPU e memória</strong> causados por malwares são detectados e investigados.</li>
+        <li>Hooks maliciosos inseridos em chamadas do sistema são detectados e removidos.</li>
+        <li>Programas que tentam se adicionar à <strong>inicialização do Windows</strong> são avaliados e controlados.</li>
+        <li>Arquivos pessoais do usuário são protegidos contra acesso não autorizado por outros programas.</li>
+        <li>O usuário é notificado apenas quando uma ação realmente requer atenção, evitando alertas excessivos.</li>
+    </ul>
+ 
+    <!-- 12. LIMPADOR DE ARQUIVOS TEMPORÁRIOS -->
+    <h1 id="limpeza">12. Limpador de Arquivos Temporários</h1>
+    <p>Remove arquivos desnecessários, liberando espaço e contribuindo para o melhor desempenho do sistema.</p>
+    <ul>
+        <li>Remove arquivos temporários de programas e do sistema operacional com segurança.</li>
+        <li>Limpa o <strong>cache de navegadores</strong>, cookies, histórico e dados de formulários.</li>
+        <li>Remove resíduos de <strong>programas desinstalados</strong> e arquivos de atualizações antigas do Windows.</li>
+        <li>Identifica <strong>arquivos duplicados</strong> que desperdiçam espaço de armazenamento.</li>
+        <li>Exibe um relatório de quanto espaço cada categoria ocupa antes de qualquer remoção.</li>
+        <li>Pode ser configurado para executar <strong>automaticamente</strong> em intervalos definidos pelo usuário.</li>
+        <li>Verifica se cada arquivo é necessário antes de removê-lo, garantindo segurança na limpeza.</li>
+        <li>Após cada limpeza, apresenta um relatório com a quantidade de espaço liberado.</li>
+    </ul>
+
+    <h1>videos:</h1>
+    <h2>propaganda/animação:</h2>
+    <iframe
+    src="https://player.vimeo.com/video/1189540014?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+    allowfullscreen
+    allowtransparency
+    allow="autoplay"
+  ></iframe>
+    <h2>versão para navegador:</h2>
+    <iframe
+    src="https://player.vimeo.com/video/1189551538?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+    allowfullscreen
+    allowtransparency
+    allow="autoplay"
+  ></iframe>
+    <h2>versão para ubuntu(linux)</h2>
+    <iframe
+    src="https://player.vimeo.com/video/1189744850?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+    allowfullscreen
+    allowtransparency
+    allow="autoplay"
+  ></iframe>
+    <h2>versão para windows:</h2>
+    <div class="plyr__video-embed" id="player">
+  <iframe
+    src="https://player.vimeo.com/video/1189196541?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+    allowfullscreen
+    allowtransparency
+    allow="autoplay"
+  ></iframe>
+    <h2>versão para android:</h2>
+    <iframe
+    src="https://player.vimeo.com/video/1189198989?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+    allowfullscreen
+    allowtransparency
+    allow="autoplay"
+  ></iframe>
+</div>
+
+
+</div>
+
+<!--janela de perfil no superior direito usnado js-->
+<div id="perfil-popover" class="popover">
+  <div class="window-perfil">
+    <div class="title-bar">
+      <span>Perfil do Usuário</span>
+      <button class="close-btn" id="close-perfil-btn">✕</button>
+    </div>
+    <div class="content-popover">
+        <p>Faça login para ver seu perfil.</p>
+        <a href="login.html"><button class="btn-login" id="login-btn">Login</button></a>
+        <a href="cadastrar.html"><button class="btn-cadastrar" id="cadastrar-btn">Cadastrar</button></a>
+        <button id="btn-logout" onclick="logout()">Sair</button>
+        <a href="configuracoes.html"><button class="btn-configuracoes">Configurações</button></a>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  const params = new URLSearchParams(location.search);
+  const q = params.get("q");
+  const anchor = location.hash.slice(1);
+
+  if (anchor) {
+    const target = document.getElementById(anchor);
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  if (!q) return;
+  const re = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
+  const root = document.querySelector(".content") || document.body;
+  const walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walk.nextNode()) nodes.push(walk.currentNode);
+
+  nodes.forEach(n => {
+    if (!re.test(n.textContent)) return;
+    const s = document.createElement("span");
+    s.innerHTML = n.textContent.replace(re, '<mark style="background:#ffe066;color:#000;border-radius:3px;padding:0 2px">$1</mark>');
+    n.parentNode.replaceChild(s, n);
+  });
+
+  if (!anchor) {
+    document.querySelector("mark")?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+})();
+</script>
+</body>
+</html>

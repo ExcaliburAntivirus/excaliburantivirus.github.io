@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script-index.js" defer></script>
+    <title>Excalibur Antivirus Download</title>
+</head>
+<body class="download-body">
+    <div class="topbar">
+        <div class=" barra">
+            <img class="logo" src="img/logo.png" alt="Logo">
+            <img class="logo-name" src="img/logo-name-better.png" alt="logo name">
+            <a href="index.html">Tela inicial</a>
+            <a href="download.html">Download</a>
+            <a href="como-funciona.html">Como funciona</a>
+            <div class="parte-left">
+                <input onclick="pesquisar()" class="barra-de-pesquisa" type="text" placeholder="Pesquisar..." id="pesquisa">
+                <button class="perfil-btn" id="abrir-popover-perfil">
+                <img src="img/perfil-icon.png" alt="conta" class="conta-img">
+                <h4 class="h4-perfil">Usuário</h4>
+                </button>
+            </div>
+        </div>
+        <img class="borda" src="img/borda-bg.png" alt="imagem">
+    </div>
+
+    <div class="content">
+        <h1>Download do Excalibur Antivirus</h1>
+        <p>Baixe o Excalibur Antivirus para sua plataforma:</p>
+        <div class="texto-sublinhado">
+            <a href="download/excalibur-windows.zip" download>Windows</a>
+            <a href="download.html" >Linux</a>
+            <a href="download.html" >MacOS</a>
+        </div>
+        <h1>Pare terminal sem interface gráfica</h1>
+        <p>Baixe o Excalibur Antivirus para terminais linux sem interface grafica:</p>
+        <div class="texto-sublinhado">
+            <a href="#">Arch Linux (terminal)</a>
+            <a href="#">Alpine Linux (terminal)</a>
+            <a href="#">Debian Linux (terminal)</a>
+            <p></p>
+            <a href="#">Fedora Linux (terminal)</a>
+            <a href="#">Ubuntu Linux (terminal)</a>
+            <a href="#">Termux (android)</a>
+        </div>
+
+        <h1>também baixe o Excalibur Antivirus no seu navegador</h1>
+        <p>Navegadores compatíveis:</p>
+        <div class="texto-sublinhado">
+            <a href="#">Chrome</a>
+            <a href="#">Firefox</a>
+        </div>
+    </div>
+
+<!--janela de perfil no superior direito usnado js-->
+<div id="perfil-popover" class="popover">
+  <div class="window-perfil">
+    <div class="title-bar">
+      <span>Perfil do Usuário</span>
+      <button class="close-btn" id="close-perfil-btn">✕</button>
+    </div>
+    <div class="content-popover">
+        <p>Faça login para ver seu perfil.</p>
+        <a href="login.html"><button class="btn-login" id="login-btn">Login</button></a>
+        <a href="cadastrar.html"><button class="btn-cadastrar" id="cadastrar-btn">Cadastrar</button></a>
+        <button id="btn-logout" onclick="logout()">Sair</button>
+        <a href="configuracoes.html"><button class="btn-configuracoes">Configurações</button></a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

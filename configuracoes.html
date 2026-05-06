@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script-index.js" defer></script>
+    <script src="token.js" defer></script>
+    <title>Configurações</title>
+</head>
+<body>
+    <div class="topbar">
+        <div class=" barra">
+            <img class="logo" src="img/logo.png" alt="Logo">
+            <img class="logo-name" src="img/logo-name-better.png" alt="logo name">
+            <a href="index.html">Tela inicial</a>
+            <a href="download.html">Download</a>
+            <a href="como-funciona.html">Como funciona</a>
+            <div class="parte-left">
+                <input onclick="pesquisar()" class="barra-de-pesquisa" type="text" placeholder="Pesquisar..." id="pesquisa">
+                <button class="perfil-btn" id="abrir-popover-perfil">
+                <img src="img/perfil-icon.png" alt="conta" class="conta-img">
+                <h4 class="h4-perfil">Usuário</h4>
+                </button>
+            </div>
+        </div>
+        <img class="borda" src="img/borda-bg.png" alt="imagem">
+    </div>
+
+    <div class="content">
+
+        <label class="switch">
+                <span class="label-text">Usar sistema de notificação</span>
+                <input type="checkbox" id="notificacao">
+                <span class="slider"></span>
+            </label>
+            <p></p>
+            <div class="btn-centro"><button onclick="" popovertarget="gerar-token" class="btn-gerar">Gerar token</button></div>
+    </div>
+
+        <!-- gerar-token -->
+
+    <div id="gerar-token" popover>
+  <div class="window">
+    
+    <div class="title-bar">
+      <span>Token gerado</span>
+      <button class="close-btn" popovertarget="gerar-token" popovertargetaction="hide">
+        ✕
+      </button>
+    </div>
+
+    <div class="content-popover">
+      <div class="header">
+      <p class="label">token gerado</p>
+      <p class="hint">clique para copiar</p>
+    </div>
+ 
+    <strong id="token-gerado" title="Clique para copiar">—</strong>
+ 
+    <canvas id="qr-canvas" width="180" height="180"></canvas>
+ 
+    <div id="feedback">token copiado.</div>
+ 
+    <button id="btn-gerar">gerar novo token</button>
+    </div>
+  </div>
+</div>
+
+<!--janela de perfil no superior direito usnado js-->
+<div id="perfil-popover" class="popover">
+  <div class="window-perfil">
+    <div class="title-bar">
+      <span>Perfil do Usuário</span>
+      <button class="close-btn" id="close-perfil-btn">✕</button>
+    </div>
+    <div class="content-popover">
+        <p>Faça login para ver seu perfil.</p>
+        <a href="login.html"><button class="btn-login" id="login-btn">Login</button></a>
+        <a href="cadastrar.html"><button class="btn-cadastrar" id="cadastrar-btn">Cadastrar</button></a>
+        <button id="btn-logout" onclick="logout()">Sair</button>
+        <a href="configuracoes.html"><button class="btn-configuracoes">Configurações</button></a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
