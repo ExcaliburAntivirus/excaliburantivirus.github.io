@@ -7,6 +7,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="script-index.js" defer></script>
+    <style>
+      @keyframes clarear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+body {
+    animation: clarear 1.5s ease-in-out;                
+}
+
+    </style>
     <title>Excalibur Antivirus</title>
 </head>
 <body>
@@ -14,7 +28,7 @@
         <div class=" barra">
             <img class="logo" src="img/logo.png" alt="Logo">
             <img class="logo-name" src="img/logo-name-better.png" alt="logo name">
-            <a href="index.html">Tela inicial</a>
+            <a>Tela inicial</a>
             <a href="download.html">Download</a>
             <a href="como-funciona.html">Como funciona</a>
             <div class="parte-left">
@@ -29,6 +43,15 @@
     </div>
 
     <div class="content">
+      <div class="center-vertical">
+        <iframe
+    src="https://player.vimeo.com/video/1189540014?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+    allowfullscreen
+    allowtransparency
+    allow="autoplay"
+  ></iframe>
+  <img src="img/logo-name-better.png" alt="">
+      </div>
         <h1>o que é o Excalibur Antivirus?</h1>
         <iframe src="text.html" frameborder="0"></iframe>
         <h1>ele é para qual plataforma?</h1>
@@ -121,6 +144,10 @@
     </div>
   </div>
 </div>
-
+<footer>
+  <h2>Excalibur Antívirus</h2>
+  <p>este projeto <strong>não é funcional</strong>. Pagina do GitHub: </p>
+  <a href="https://github.com/ExcaliburAntivirus/excaliburantivirus.github.io" target="_blank">link da pagina</a>
+</footer>
 </body>
 </html>
