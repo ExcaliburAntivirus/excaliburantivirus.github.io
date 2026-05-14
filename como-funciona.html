@@ -17,6 +17,7 @@
             <a href="index.html">Tela inicial</a>
             <a href="download.html">Download</a>
             <a>Como funciona</a>
+            <a href="forum.html">Forum</a>
             <div class="parte-left">
                 <input onclick="pesquisar()" class="barra-de-pesquisa" type="text" placeholder="Pesquisar..." id="pesquisa">
                 <button class="perfil-btn" id="abrir-popover-perfil">
@@ -32,7 +33,7 @@
     <h1>Como Funciona o Excalibur Antivirus</h1>
     <p>Veja como o Excalibur Antivirus protege o sistema de forma eficiente:</p>
  
-    <!-- 1. SANDBOX -->
+    
     <h1 id="sandboxing">1. Sandbox</h1>
     <p>O sandbox é um ambiente isolado onde programas suspeitos são executados com segurança, impedindo que ameaças afetem o sistema principal durante a análise.</p>
     <ul>
@@ -47,8 +48,9 @@
     <div class="sandbox-image-container">
         <img class="sandbox-image" src="img/exemplo-sandbox.png" alt="Exemplo de Sandbox">
     </div>
- 
-    <!-- 2. BANCO DE ASSINATURAS -->
+
+    <img class="divider" src="img/divider.png">
+    
     <h1 id="assinaturas">2. Banco de Assinaturas</h1>
     <p>O antivírus possui um banco de dados com registros de ameaças conhecidas. Os arquivos são comparados com esse banco para identificar vírus já catalogados.</p>
     <ul>
@@ -61,8 +63,9 @@
         <li>Funciona como a <strong>primeira linha de defesa</strong>, antes de técnicas mais avançadas serem acionadas.</li>
         <li>Complementado por uma base em nuvem para cobertura máxima.</li>
     </ul>
- 
-    <!-- 3. SIGMA RULES -->
+
+    <img class="divider" src="img/divider.png">
+
     <h1 id="sigma">3. Sigma Rules</h1>
     <p>As regras Sigma identificam padrões suspeitos no sistema com base em comportamentos conhecidos, mesmo que o arquivo não esteja no banco de assinaturas. A taxa de falso positivo é de aproximadamente 4%.</p>
     <ul>
@@ -77,8 +80,9 @@
     <div class="sigma-image-container">
         <img class="sigma-image" src="img/exemplo-sigma-rules.png" alt="Exemplo de Sigma Rules">
     </div>
- 
-    <!-- 4. HEURÍSTICA -->
+
+    <img class="divider" src="img/divider.png">
+
     <h1 id="heuristica">4. Heurística</h1>
     <p>A análise heurística avalia arquivos desconhecidos com base em características suspeitas, identificando possíveis ameaças novas sem precisar de uma assinatura prévia.</p>
     <ul>
@@ -91,8 +95,9 @@
         <li>Arquivos com pontuação alta são automaticamente encaminhados para análise em sandbox.</li>
         <li>A sensibilidade é calibrada para minimizar falsos positivos sem perder eficácia.</li>
     </ul>
- 
-    <!-- 5. ANÁLISE COMPORTAMENTAL -->
+
+    <img class="divider" src="img/divider.png">
+    
     <h1 id="comportamento">5. Análise Comportamental</h1>
     <p>O sistema monitora o comportamento dos programas em tempo real e bloqueia ações consideradas perigosas.</p>
     <ul>
@@ -105,8 +110,9 @@
         <li>Tentativas de persistência maliciosa (iniciar com o sistema) são avaliadas e controladas.</li>
         <li>Algoritmos de <strong>machine learning</strong> melhoram continuamente a detecção de comportamentos maliciosos.</li>
     </ul>
+
+    <img class="divider" src="img/divider.png">
  
-    <!-- 6. PROTEÇÃO WEB -->
     <h1 id="web">6. Proteção Web</h1>
     <p>A proteção web analisa o tráfego de internet e bloqueia o acesso a sites maliciosos ou potencialmente perigosos.</p>
     <ul>
@@ -123,8 +129,9 @@
     <div class="web-protection-image-container">
         <img class="web-protection-image" src="img/exemplo-proteção-web.png" alt="Exemplo de Proteção Web">
     </div>
+
+    <img class="divider" src="img/divider.png">
  
-    <!-- 7. VPN -->
     <h1 id="vpn">7. VPN</h1>
     <p>A VPN protege a conexão do usuário, criptografando os dados e aumentando a privacidade durante a navegação.</p>
     <ul>
@@ -138,8 +145,9 @@
         <li>Ativa automaticamente ao detectar redes Wi-Fi não seguras.</li>
         <li>Cobre múltiplos dispositivos simultaneamente com uma única conta.</li>
     </ul>
+
+    <img class="divider" src="img/divider.png">
  
-    <!-- 8. REPUTAÇÃO EM NUVEM -->
     <h1 id="nuvem">8. Reputação em Nuvem</h1>
     <p>O antivírus consulta servidores online para verificar a reputação de arquivos em tempo real, garantindo informações sempre atualizadas.</p>
     <ul>
@@ -151,8 +159,9 @@
         <li>Ameaças emergentes identificadas na nuvem são distribuídas imediatamente a todos os usuários.</li>
         <li>Quando offline, o Excalibur mantém proteção local completa.</li>
     </ul>
+
+    <img class="divider" src="img/divider.png">
  
-    <!-- 9. PROTEÇÃO CONTRA EXPLOITS -->
     <h1 id="exploit">9. Proteção contra Exploits</h1>
     <p>Essa função impede a exploração de falhas em programas, bloqueando tentativas de invasão baseadas em vulnerabilidades.</p>
     <ul>
@@ -165,8 +174,9 @@
         <li>Aplicativos legados sem suporte recebem proteção adicional contra exploits.</li>
         <li>Atua em camada de kernel sem afetar a performance do sistema.</li>
     </ul>
+
+    <img class="divider" src="img/divider.png">
  
-    <!-- 10. AUTOPROTEÇÃO -->
     <h1 id="autoprotecao">10. Autoproteção</h1>
     <p>O antivírus possui mecanismos internos que evitam sua desativação por softwares maliciosos.</p>
     <ul>
@@ -179,8 +189,9 @@
         <li>Mantém proteção ativa mesmo no <strong>modo seguro</strong> do Windows.</li>
         <li>Bloqueia <strong>rootkits</strong> que tentam ocultar processos maliciosos e desativar o antivírus.</li>
     </ul>
+
+    <img class="divider" src="img/divider.png">
  
-    <!-- 11. CONTROLE DE COMPORTAMENTO DO SISTEMA -->
     <h1 id="controle">11. Controle de Comportamento do Sistema</h1>
     <p>Monitora continuamente as atividades do sistema, impedindo ações suspeitas antes que causem danos.</p>
     <ul>
@@ -193,8 +204,9 @@
         <li>Arquivos pessoais do usuário são protegidos contra acesso não autorizado por outros programas.</li>
         <li>O usuário é notificado apenas quando uma ação realmente requer atenção, evitando alertas excessivos.</li>
     </ul>
+
+    <img class="divider" src="img/divider.png">
  
-    <!-- 12. LIMPADOR DE ARQUIVOS TEMPORÁRIOS -->
     <h1 id="limpeza">12. Limpador de Arquivos Temporários</h1>
     <p>Remove arquivos desnecessários, liberando espaço e contribuindo para o melhor desempenho do sistema.</p>
     <ul>
@@ -207,6 +219,8 @@
         <li>Verifica se cada arquivo é necessário antes de removê-lo, garantindo segurança na limpeza.</li>
         <li>Após cada limpeza, apresenta um relatório com a quantidade de espaço liberado.</li>
     </ul>
+
+    <img class="divider" src="img/divider.png">
 
     <h1>videos:</h1>
     <h2>propaganda/animação:</h2>
@@ -234,6 +248,13 @@
     <div class="plyr__video-embed" id="player">
   <iframe
     src="https://player.vimeo.com/video/1189196541?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+    allowfullscreen
+    allowtransparency
+    allow="autoplay"
+  ></iframe>
+  <h2>versão para MacOS</h2>
+    <iframe
+    src="https://player.vimeo.com/video/1190822130?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
     allowfullscreen
     allowtransparency
     allow="autoplay"
