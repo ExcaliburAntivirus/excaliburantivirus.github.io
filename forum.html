@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script-index.js" defer></script>
+    <title>excalibur antivírus forum</title>
+</head>
+<body>
+    <div class="topbar">
+        <div class=" barra">
+            <img class="logo" src="img/logo.png" alt="Logo">
+            <img class="logo-name" src="img/logo-name-better.png" alt="logo name">
+            <a href="index.html">Tela inicial</a>
+            <a href="download.html">Download</a>
+            <a href="como-funciona.html">Como funciona</a>
+            <a>Forum</a>
+            <div class="parte-left">
+                <input onclick="pesquisar()" class="barra-de-pesquisa" type="text" placeholder="Pesquisar..." id="pesquisa">
+                <button class="perfil-btn" id="abrir-popover-perfil">
+                <img src="img/perfil-icon.png" alt="conta" class="conta-img">
+                <h4 class="h4-perfil">Usuário</h4>
+                </button>
+            </div>
+        </div>
+        <img class="borda" src="img/borda-bg.png" alt="imagem">
+    </div>
+
+    
+
+    <div class="content">
+        <table>
+            <thead>
+
+            <tr><th>categorias</th></tr>
+
+            </thead>
+            <tbody>
+
+            <tr><td><img src="img/anuncio-icon.png" alt="icone"><h4>anuncios</h4><div class="right-flex"><h4>35 Tópicos</h4><hr><h4>186 Posts</h4></div></td></tr>
+            <tr><td><img src="img/rules-icon.png" alt="icone"><h4>regras e informações</h4><div class="right-flex"><h4>8 Tópicos</h4><hr><h4>35 Posts</h4></div></td></tr>
+            <tr><td><img src="img/help-icon.png" alt="icone"><h4>suporte</h4><div class="right-flex"><h4>112 Tópicos</h4><hr><h4>842 Posts</h4></div></td></tr>
+            <tr><td><img src="img/lampada.png" alt="icone"><h4>sugestões</h4><div class="right-flex"><h4>67 Tópicos</h4><hr><h4>513 Posts</h4></div></td></tr>
+            <tr><td><img src="img/book.png" alt="icone"><h4>discusões gerais</h4><div class="right-flex"><h4>231 Tópicos</h4><hr><h4>2.104 Posts</h4></div></td></tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!--janela de perfil no superior direito usnado js-->
+<div id="perfil-popover" class="popover">
+  <div class="window-perfil">
+    <div class="title-bar">
+      <span>Perfil do Usuário</span>
+      <button class="close-btn" id="close-perfil-btn">✕</button>
+    </div>
+    <div class="content-popover">
+        <p>Faça login para ver seu perfil.</p>
+        <a href="login.html"><button class="btn-login" id="login-btn">Login</button></a>
+        <a href="cadastrar.html"><button class="btn-cadastrar" id="cadastrar-btn">Cadastrar</button></a>
+        <button id="btn-logout" onclick="logout()">Sair</button>
+        <a href="configuracoes.html"><button class="btn-configuracoes">Configurações</button></a>
+    </div>
+  </div>
+</div>
+<footer>
+  <h2>Excalibur Antívirus</h2>
+  <p>este projeto <strong>não é funcional</strong>. Pagina do GitHub: </p>
+  <a href="https://github.com/ExcaliburAntivirus/excaliburantivirus.github.io" target="_blank">link da pagina</a>
+</footer>
+
+</body>
+</html>
