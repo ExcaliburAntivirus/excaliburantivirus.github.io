@@ -215,7 +215,7 @@ a {
     filter: drop-shadow(5px 5px 8px rgb(0, 0, 0));
     transition: all 0.3s ease;
     margin: 0 2vw;
-    height: 80vh;
+    min-height: 80vh;
 }
 .plano:hover {
     padding: 7vh;
@@ -470,8 +470,8 @@ a {
     padding-right: 3vh;
 }
 .tela-login input::placeholder {
-  color: #c2c1c0; /* Cor desejada */
-  opacity: 1;    /* Firefox geralmente reduz a opacidade por padrão */
+  color: #c2c1c0;
+  opacity: 1;
 }
 .tela-login input:hover {
     filter: drop-shadow(5px 5px 8px rgb(0, 0, 0)) brightness(1.2);
@@ -704,49 +704,64 @@ footer a {
 .text-excalibur ul li {
     font-size: 2.5vh;
 }
+.c-c2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
 .container-coisas {
     display: flex;
-    gap: 2%;
-    height: auto;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: center;
+    gap: 2%;
+    width: 90%;
 }
-.item:nth-child(1),
-.item:nth-child(2),
-.item:nth-child(3),
-.item:nth-child(4),
-.item:nth-child(5),
-.item:nth-child(6),
-.item:nth-child(7),
-.item:nth-child(8) {
-    width: 19.5%;
-    min-height:30vh;
-    margin: 1vh;
-    background-color: #45180064;
-    border-radius: 1vw;
-    padding: 2vh;
-    border: 2px solid #c8a177;
-    backdrop-filter: blur(1px);
-}
-.item:nth-child(1):hover,
-.item:nth-child(2):hover,
-.item:nth-child(3):hover,
-.item:nth-child(4):hover,
-.item:nth-child(5):hover,
-.item:nth-child(6):hover,
-.item:nth-child(7):hover,
-.item:nth-child(8):hover {
-    width: 21%;
-    border: 2px solid #d6bb57;
-    margin: 1vh;
-    background-color: #451800ab;
-}
+
+/* Todos os itens */
 .container-coisas .item {
     display: flex;
     flex-direction: column;
+    
+    /* 3 por linha */
+    width: 30%;
+
+    min-height: 30vh;
+
+    padding: 2%;
+    margin-bottom: 2%;
+
+    background-color: #45180064;
+    border: 2px solid #c8a177;
+    border-radius: 1vw;
+
+    backdrop-filter: blur(1px);
+
+    transition: 0.2s ease;
+    box-sizing: border-box;
+}
+
+.container-coisas .item:hover {
+    transform: scale(1.03);
+    border-color: #d6bb57;
+    background-color: #451800ab;
+}
+
+@media (max-width: 900px) {
+    .container-coisas .item {
+        width: 47%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-coisas .item {
+        width: 100%;
+    }
 }
 .container-coisas .item h2 {
     margin: 0;
+    font-size: 3vh;
 }
 .container-coisas .item p {
     font-size: 2.4vh;
